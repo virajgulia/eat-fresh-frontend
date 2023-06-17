@@ -1,0 +1,56 @@
+.main_con {
+    background-color: rgb(245, 245, 245);
+}
+
+.home_main {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(32, 32, 32, 0.7), rgba(26, 25, 25, 0.801)), url('/public/homeBg.jpg')
+}
+
+.home_para_con {
+    height: 75vh;
+}
+
+.round_con {
+    height: 90vh;
+}
+
+.dd {
+    background-image: url('/public/rotatingImg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: rotation 100s linear infinite;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.left_con_text {
+    color: #ffffff;
+}
+
+.left_con_text h1 {
+    font-size: 63px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900
+}
+
+
+.left_con_text p {
+    font-family: "Nunito", sans-serif;
+
+}

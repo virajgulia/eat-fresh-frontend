@@ -1,0 +1,49 @@
+.table_card_con {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.table_card {
+    width: 250px;
+    height: 200px !important;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 2px rgb(201, 200, 200);
+    border-radius: 7px;
+    transition: all linear 0.2s;
+}
+
+.table_card:hover {
+    box-shadow: 0px 0px 5px rgb(141, 139, 139);
+
+}
+
+.left_con {
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 8px;
+    color: white;
+}
+
+.left_con td {
+    color: white;
+    font-weight: bold;
+}
+
+.left_con th {
+    color: white;
+    font-weight: bold;
+}
+
+.visit_main_con {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    border: 0.000001px solid rgba(0, 0, 0, 0.671);
+    background-image: linear-gradient(rgba(54, 54, 54, 0.7), rgba(39, 39, 39, 0.7)), url('/public/visitBG.jpg')
+}
+
+
+
+.visit_main_con h2 {
+    color: red;
+}

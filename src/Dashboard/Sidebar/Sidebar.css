@@ -1,0 +1,51 @@
+.sidebar_main_con {
+    transition: all 0.1s linear;
+    /* min-height: 80vh !important; */
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #373754;
+    box-shadow: 4px 3px 3px grey;
+}
+
+.main_con {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+.logo {
+    color: white;
+    text-shadow: 1px 1px 1px red;
+
+}
+
+
+.child_main_con {
+    background-color: #f3f5f7;
+    padding: 0px;
+    margin: 0px;
+}
+
+.top_bar_maincon {
+    height: 50px;
+    color: white;
+    background-color: #373754;
+    position: sticky;
+    top: 0;
+}
+
+.link_maincon {
+    text-decoration: none;
+    border-bottom: 1px solid grey;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.active {
+    color: #ff5217;
+
+}

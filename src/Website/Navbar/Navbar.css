@@ -1,0 +1,15 @@
+.header_con ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+li {
+    cursor: pointer;
+}
+
+.main_con {
+    height: fit-content;
+}

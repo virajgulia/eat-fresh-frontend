@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Home",
+        "path": "/home"
+    },
+    {
+        "title": "Table",
+        "path": "/table"
+    },
+    {
+        "title": "Items",
+        "path": "/item"
+    },
+    {
+        "title": "Product",
+        "path": "/products"
+    }
+]

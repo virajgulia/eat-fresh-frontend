@@ -1,0 +1,61 @@
+/* card css  */
+.card_main_con {
+    width: 270px;
+    padding: 20px;
+    background-color: white;
+    border: none !important;
+    border-radius: 20px;
+    /* box-shadow: 0px 0px 20px rgb(214, 214, 214); */
+}
+
+.card_main_con .heading {
+    font-weight: 700;
+    font-size: 24px;
+    font-family: Verdana;
+}
+
+.card_main_con p {
+    color: rgb(139, 139, 139);
+    text-align: justify;
+}
+
+.card_icon {
+    color: orange;
+}
+
+/* popular items  */
+.tab_con {
+    width: fit-content;
+}
+
+
+.tab_active {
+    color: orange !important;
+}
+
+.tab_heading {
+    font-family: "Nunito", sans-serif;
+    color: orange;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.food_con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.food_img_con img {
+    width: 80px;
+    height: 80px;
+}
+
+.rs {
+    color: orange;
+}
+
+.food_sub_con {
+    height: fit-content;
+    border-bottom: 1px solid orange;
+}
