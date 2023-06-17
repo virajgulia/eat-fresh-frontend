@@ -60,6 +60,7 @@ export const Product = () => {
                     <TableRow>
                         <TableCell>Sno.</TableCell>
                         <TableCell>Name</TableCell>
+                        <TableCell>Category</TableCell>
                         <TableCell>Action</TableCell>
                     </TableRow>
                 </TableHead>
@@ -69,6 +70,7 @@ export const Product = () => {
                             <TableRow key={key}>
                                 <TableCell>{key + 1}</TableCell>
                                 <TableCell>{res.name}</TableCell>
+                                <TableCell>{res.category}</TableCell>
                                 <TableCell>
                                     <i class="pointer fs-3 fa fa-trash-o" aria-hidden="true"></i>
                                 </TableCell>

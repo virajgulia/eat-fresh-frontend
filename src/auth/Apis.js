@@ -12,6 +12,7 @@ export const APIS = {
         common: `${base_url}item`
     },
     PRODUCT: {
-        common: `${base_url}product`
+        common: `${base_url}product`,
+        getByCategory: `${base_url}productByCategory`
     }
 }
