@@ -18,7 +18,6 @@ export const ItemSlice = createSlice({
     initialState: [],
     extraReducers: (builder) => {
         builder.addCase(ItemCrud.fulfilled, (state, action) => {
-
             switch (action.payload.method) {
                 case 'post':
                     return [...state, action.payload.data]
@@ -30,13 +29,10 @@ export const ItemSlice = createSlice({
                     break;
             }
         })
-
         builder.addCase(ItemCrud.rejected, (state, action) => {
-
             return state
         })
         builder.addCase(ItemCrud.pending, (state, action) => {
-
             return state
         })
     }
