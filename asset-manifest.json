@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a2c5189.css",
-    "main.js": "/static/js/main.8b879a6f.js",
-    "static/js/787.131be096.chunk.js": "/static/js/787.131be096.chunk.js",
-    "static/media/visitBG.jpg": "/static/media/visitBG.63196f20e2a0262e1d15.jpg",
-    "static/media/homeBg.jpg": "/static/media/homeBg.3ec5183719fa3e1eadeb.jpg",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/rotatingImg.png": "/static/media/rotatingImg.fac19e0f2cbb5be17b6c.png",
-    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/index.html",
-    "main.9a2c5189.css.map": "/static/css/main.9a2c5189.css.map",
-    "main.8b879a6f.js.map": "/static/js/main.8b879a6f.js.map",
-    "787.131be096.chunk.js.map": "/static/js/787.131be096.chunk.js.map"
+    "main.css": "/eat-fresh-frontend/static/css/main.9aecb298.css",
+    "main.js": "/eat-fresh-frontend/static/js/main.446f5fb6.js",
+    "static/js/787.131be096.chunk.js": "/eat-fresh-frontend/static/js/787.131be096.chunk.js",
+    "static/media/visitBG.jpg": "/eat-fresh-frontend/static/media/visitBG.63196f20e2a0262e1d15.jpg",
+    "static/media/homeBg.jpg": "/eat-fresh-frontend/static/media/homeBg.3ec5183719fa3e1eadeb.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/eat-fresh-frontend/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/rotatingImg.png": "/eat-fresh-frontend/static/media/rotatingImg.fac19e0f2cbb5be17b6c.png",
+    "static/media/fontawesome-webfont.eot": "/eat-fresh-frontend/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/eat-fresh-frontend/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/eat-fresh-frontend/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/eat-fresh-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/eat-fresh-frontend/index.html",
+    "main.9aecb298.css.map": "/eat-fresh-frontend/static/css/main.9aecb298.css.map",
+    "main.446f5fb6.js.map": "/eat-fresh-frontend/static/js/main.446f5fb6.js.map",
+    "787.131be096.chunk.js.map": "/eat-fresh-frontend/static/js/787.131be096.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a2c5189.css",
-    "static/js/main.8b879a6f.js"
+    "static/css/main.9aecb298.css",
+    "static/js/main.446f5fb6.js"
   ]
 }
