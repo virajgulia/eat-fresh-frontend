@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eat-fresh-frontend/static/css/main.9aecb298.css",
-    "main.js": "/eat-fresh-frontend/static/js/main.446f5fb6.js",
+    "main.js": "/eat-fresh-frontend/static/js/main.12d9cbe3.js",
     "static/js/787.131be096.chunk.js": "/eat-fresh-frontend/static/js/787.131be096.chunk.js",
     "static/media/visitBG.jpg": "/eat-fresh-frontend/static/media/visitBG.63196f20e2a0262e1d15.jpg",
     "static/media/homeBg.jpg": "/eat-fresh-frontend/static/media/homeBg.3ec5183719fa3e1eadeb.jpg",
@@ -13,11 +13,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/eat-fresh-frontend/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/eat-fresh-frontend/index.html",
     "main.9aecb298.css.map": "/eat-fresh-frontend/static/css/main.9aecb298.css.map",
-    "main.446f5fb6.js.map": "/eat-fresh-frontend/static/js/main.446f5fb6.js.map",
+    "main.12d9cbe3.js.map": "/eat-fresh-frontend/static/js/main.12d9cbe3.js.map",
     "787.131be096.chunk.js.map": "/eat-fresh-frontend/static/js/787.131be096.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9aecb298.css",
-    "static/js/main.446f5fb6.js"
+    "static/js/main.12d9cbe3.js"
   ]
 }
