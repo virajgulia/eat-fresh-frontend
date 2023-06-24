@@ -5,7 +5,7 @@ export const AddEditProduct = ({ closeDialog }) => {
     let addProduct = useRef([
         { name: 'name', type: 'text', label: 'Product Name' },
         { name: 'price', type: 'number', label: 'Product Price' },
-        { name: 'image', type: 'text', label: 'Product Img' },
+        { name: 'image', type: 'file', label: 'Product Img' },
         { name: 'category', type: 'select', label: 'Product Name', options: ['breakfast', 'lunch', 'dinner'] },
     ])
     return (

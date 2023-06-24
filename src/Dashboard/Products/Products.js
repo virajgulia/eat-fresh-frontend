@@ -6,6 +6,7 @@ import axios from "axios"
 import { APIS } from "../../auth/Apis"
 import { useDispatch, useSelector } from "react-redux"
 import { productCrud } from "../../Store/Slices/ProductSlice"
+import { fileUpload } from "../../auth/Firebase/ImageUpload"
 
 export const Product = () => {
     const [dialog, setDialog] = useState(false)
@@ -16,16 +17,21 @@ export const Product = () => {
     let sel = useSelector(e => e.product)
     let dispatch = useDispatch()
     async function addProduct(e) {
+
         e.preventDefault()
-        let rr = $('#form input').serializeArray()
-        let rr2 = $('#form select').serializeArray()
+        let file = $('#form input')[2].files[0]
+        let image = await fileUpload(file)
+        let rr = $('#form').serializeArray()
+        // console.log(rr)
         let obj = {}
-        let formData = [...rr, ...rr2]
-        formData.forEach(res => obj[res.name] = res.value)
+
+        rr.forEach(res => obj[res.name] = res.value)
         console.log(obj)
+
+
         try {
             setDialog(false)
-            dispatch(productCrud({ method: 'post', data: obj }))
+            dispatch(productCrud({ method: 'post', data: { ...obj, image } }))
         }
         catch (err) {
             console.log(err)
@@ -58,7 +64,7 @@ export const Product = () => {
             <Table>
                 <TableHead>
                     <TableRow>
-                        <TableCell>Sno.</TableCell>
+                        <TableCell>Images</TableCell>
                         <TableCell>Name</TableCell>
                         <TableCell>Category</TableCell>
                         <TableCell>Action</TableCell>
@@ -68,7 +74,9 @@ export const Product = () => {
                     {sel.map((res, key) => {
                         return (
                             <TableRow key={key}>
-                                <TableCell>{key + 1}</TableCell>
+                                <TableCell>
+                                    <img src={res.image} style={{ width: '40px', height: '40px' }} />
+                                </TableCell>
                                 <TableCell>{res.name}</TableCell>
                                 <TableCell>{res.category}</TableCell>
                                 <TableCell>

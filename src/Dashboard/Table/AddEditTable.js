@@ -2,9 +2,20 @@ import { useRef } from "react"
 import { Form } from "../../Form"
 
 export const AddEditTable = ({ closeDialog, tableData }) => {
+
+
+
     let addTable = useRef([
-        { name: 'name', type: 'text', label: 'Table Name', value: tableData },
+        { name: 'name', type: 'text', label: 'Table Name', value: tableData.state.name, onChange: formChange },
     ])
+    function ooo() {
+        console.log(tableData.state.name)
+    }
+    function formChange(e) {
+        let { name } = e.target
+        let { value } = e.target
+        tableData.set((pre) => { return { ...pre, [name]: value } })
+    }
 
 
     return (
@@ -22,6 +33,7 @@ export const AddEditTable = ({ closeDialog, tableData }) => {
             <div className="flex justify-content-end">
                 <button className="close_btn me-3" type="button" onClick={closeDialog}>close</button>
                 <button className="btn_primary" type="submit">Submit</button>
+                <button onClick={ooo} className="btn_primary">okokokok</button>
             </div>
         </>
     )

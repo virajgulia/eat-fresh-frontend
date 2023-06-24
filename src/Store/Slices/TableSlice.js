@@ -19,13 +19,20 @@ export const TablesSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(tableCrud.fulfilled, (state, action) => {
             let { type, data } = action.payload
-            if (type == 'get') {
-                return data
+            switch (type) {
+                case 'get':
+                    return data
+                case 'post':
+                    toast.success('Data updated success fully')
+                    return [...state, data[0]]
+                case 'put':
+                    console.log(data)
+                    state[state.findIndex(r => r._id == action.payload.data._id)] = action.payload.data
+                    return state
+                default:
+                    return state
             }
-            else if (type == 'post') {
-                toast.success('Data updated success fully')
-                return [...state, data[0]]
-            }
+
         })
         builder.addCase(tableCrud.rejected, (state, action) => {
             return state

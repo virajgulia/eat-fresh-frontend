@@ -1,75 +1,67 @@
 import { useEffect, useState } from "react"
 import './Table.css'
-import $ from 'jquery'
 import { Button, Dialog } from "@mui/material"
 import { AddEditTable } from "./AddEditTable"
-import axios from "axios"
 import { useNavigate } from "react-router"
 import { useDispatch, useSelector } from "react-redux"
 import { tableCrud } from "../../Store/Slices/TableSlice"
-import { toast } from "react-toastify"
+
+
 export const Table = () => {
 
     const [dialog, setDialog] = useState(false)
-    const [tableData, setTableData] = useState('')
+    const [tableData, setTableData] = useState({ name: '', items: [] })
     const [editTableId, setEditTableId] = useState('')
+
     const dispatch = useDispatch()
     const [mode, setMode] = useState('')
     let navigate = useNavigate()
-
     let { table } = useSelector(sel => sel)
 
     async function addTable(e) {
         e.preventDefault()
-        let rr = $('#form input').serializeArray()
+        console.log(tableData)
+    }
 
-        if (mode == 'add') {
-            try {
-                dispatch(tableCrud({ met: 'post', data: { name: rr[0].value } }))
+
+    async function addTable(e) {
+        e.preventDefault()
+        try {
+            if (mode == 'add') {
+                dispatch(tableCrud({ met: 'post', data: { name: tableData.name } }))
                 setDialog(false)
             }
-            catch (err) {
-                console.log(err)
-            }
-        }
-        else {
-
-            if (editTableId !== '') {
-
-                let editData = $('#form input').serializeArray()
-                console.log(editData[0].value)
-                let data = { name: editData[0].value }
-                try {
-
-                    dispatch(tableCrud({ met: 'put', data: { name: editData[0].value, _id: editTableId } }))
-
+            else {
+                if (editTableId !== '') {
+                    dispatch(tableCrud({ met: 'put', data: { name: tableData.name, _id: editTableId } }))
                     setDialog(false)
                 }
-                catch (err) {
-                    console.log(err)
-                }
             }
         }
+        catch (err) {
+            setDialog(false)
+            console.log(err)
+        }
+
+
     }
     async function editTable(name, id) {
         setDialog(true)
         setEditTableId(id)
         setMode('edit')
-        setTableData(name)
+        setTableData({ ...tableData, name })
     }
 
 
     function closeDialog() {
         setDialog(false)
         setEditTableId('')
-        setTableData('')
+        setTableData({ name: '' })
     }
     useEffect(() => {
-
         if (table.length == 0) {
             dispatch(tableCrud({ met: 'get' }))
         }
-
     }, [])
 
     return (
@@ -81,7 +73,7 @@ export const Table = () => {
             >
                 <div className="p-3">
                     <form onSubmit={addTable} id="form">
-                        <AddEditTable tableData={tableData} closeDialog={closeDialog} />
+                        <AddEditTable tableData={{ state: tableData, set: setTableData }} closeDialog={closeDialog} />
                     </form>
                 </div>
             </Dialog>

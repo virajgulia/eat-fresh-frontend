@@ -1,12 +1,17 @@
 import { useRef } from "react"
 import { Form } from "../../Form"
 
-export const AddEditItem = ({ closeDialog }) => {
+export const AddEditItem = ({ closeDialog, itemData }) => {
 
     let addTable = useRef([
-        { name: 'name', type: 'text', label: 'Item Name' },
-        { name: 'price', type: 'number', label: 'Item Price' },
+        { name: 'name', type: 'text', label: 'Item Name', value: itemData.state.name, onChange: formChange },
+        { name: 'price', type: 'number', label: 'Item Price', value: itemData.state.price, onChange: formChange },
     ])
+
+    function formChange(e) {
+        let { name, value } = e.target
+        itemData.set((pre) => { return { ...pre, [name]: value } })
+    }
 
 
 

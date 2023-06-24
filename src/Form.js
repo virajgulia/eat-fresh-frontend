@@ -5,9 +5,10 @@ export const Form = ({ data }) => {
         switch (res.type) {
             case 'text':
             case 'number':
+            case 'file':
                 return <div>
                     <label><b>{res.label}</b></label>
-                    <input required defaultValue={res.value} className="form-control" name={res.name} type={res.type} />
+                    <input onChange={res.onChange} required defaultValue={res.value} className="form-control" name={res.name} type={res.type} />
                 </div>
             case 'select':
                 return (
@@ -19,6 +20,7 @@ export const Form = ({ data }) => {
                         </select>
                     </div>
                 )
+
             default:
                 break;
         }

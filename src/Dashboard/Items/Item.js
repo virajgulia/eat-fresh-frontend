@@ -7,26 +7,47 @@ import { ItemCrud } from "../../Store/Slices/ItemSlice"
 
 export const Item = () => {
     const [dialog, setDialog] = useState(false)
-
+    const [mode, setMode] = useState('')
     let sel = useSelector(sel => sel.item)
     let dispatch = useDispatch()
 
+    const [itemData, setItemData] = useState({
+        name: '',
+        price: ''
+    })
 
     async function addItem(e) {
-        e.preventDefault()
-        let rr = $('#form input').serializeArray()
-        let obj = {}
 
-        rr.forEach(res => obj[res.name] = res.value)
-        console.log(obj)
+        e.preventDefault()
+        console.log(itemData)
         try {
-            dispatch(ItemCrud({ method: 'post', data: obj }))
-            setDialog(false)
+            if (mode == 'add') {
+                dispatch(ItemCrud({ method: 'post', data: itemData }))
+                setDialog(false)
+            }
+            else {
+                dispatch(ItemCrud({ method: 'put', params: { _id: itemData._id }, data: itemData }))
+                setDialog(false)
+            }
+            setItemData({
+                name: '',
+                price: ''
+            })
         }
+
         catch (err) {
             console.log(err)
         }
     }
+
+    function moveToEdit(data) {
+        setMode('edit')
+        setDialog(true)
+        setItemData(data)
+    }
+
+
+
     async function getAllItems() {
         try {
             dispatch(ItemCrud({ method: 'get' }))
@@ -60,7 +81,7 @@ export const Item = () => {
             >
                 <div className="p-3">
                     <form onSubmit={addItem} id="form">
-                        <AddEditItem closeDialog={() => setDialog(false)} />
+                        <AddEditItem itemData={{ state: itemData, set: setItemData }} closeDialog={() => setDialog(false)} />
                     </form>
                 </div>
             </Dialog>
@@ -69,7 +90,7 @@ export const Item = () => {
             <div className="p-3">
                 <div className="text-end p-3">
                     <button className="btn_primary" onClick={() => {
-
+                        setMode('add')
                         setDialog(true)
                     }}>Add Item</button>
                 </div>
@@ -90,7 +111,10 @@ export const Item = () => {
                                 <TableRow key={key}>
                                     <TableCell>{key + 1}</TableCell>
                                     <TableCell>{res.name}</TableCell>
-                                    <TableCell><i onClick={() => deleteItem(res._id)} class="pointer fs-3 fa fa-trash-o" aria-hidden="true"></i></TableCell>
+                                    <TableCell>
+                                        <i onClick={() => deleteItem(res._id)} class="pointer fs-3 fa fa-trash-o" aria-hidden="true"></i>
+                                        <i onClick={() => moveToEdit(res)} class="pointer fs-3 fa fa-edit" aria-hidden="true"></i>
+                                    </TableCell>
                                 </TableRow>
                             )
                         })}

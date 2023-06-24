@@ -1,4 +1,5 @@
 const base_url = 'https://eat-fresh.onrender.com/'
+// const base_url = 'http://localhost:8000/'
 
 export const APIS = {
 
