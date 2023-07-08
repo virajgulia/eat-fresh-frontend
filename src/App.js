@@ -1,13 +1,13 @@
 // import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Dashboardkeeper } from './auth/Dashboardkeeper';
-import { Login } from './auth/Login';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { AllRoutes } from './Allroutes';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Loader } from './Loader';
 import { WebKeeper } from './auth/WebKeeper';
 import { Signup } from './auth/Signup';
+import { Login } from './auth/Login/Login';
 function App() {
 
 
