@@ -1,5 +1,5 @@
-// const base_url = 'https://eat-fresh.onrender.com/'
-const base_url = 'http://localhost:8000/'
+const base_url = 'https://eat-fresh.onrender.com/'
+// const base_url = 'http://localhost:8000/'
 
 export const APIS = {
     SIGNUP: `${base_url}signup`,
