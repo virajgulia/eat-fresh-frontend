@@ -33,7 +33,6 @@ export const AddEditTable = ({ closeDialog, tableData }) => {
             <div className="flex justify-content-end">
                 <button className="close_btn me-3" type="button" onClick={closeDialog}>close</button>
                 <button className="btn_primary" type="submit">Submit</button>
-                <button onClick={ooo} className="btn_primary">okokokok</button>
             </div>
         </>
     )

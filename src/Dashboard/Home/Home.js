@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import "./Home.css"
 import { fileUpload } from "../../auth/Firebase/ImageUpload"
 export const Home = () => {
     const [data, setData] = useState({})
@@ -11,9 +11,10 @@ export const Home = () => {
     }
     return (
         <>
-            <div>this is home</div>
-            <input type='file' onChange={(e) => setData(e.target.files[0])} />
-            <button onClick={submit} className="btn_primary">Submit</button>
+            <div className="main_con">
+
+                <img src="/cheff.webp" />
+            </div>
         </>
     )
 }

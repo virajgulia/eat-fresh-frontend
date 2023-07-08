@@ -15,16 +15,17 @@ export const PopularItems = () => {
     let dispatch = useDispatch()
 
     function getProductByCategory() {
-        dispatch(loader('start'))
-        ProductService.getProductByCategory({ category: tabValue }).then((res) => {
-            console.log(res.data)
-            dispatch(loader('stop'))
-            setTabData(res.data)
-        })
-            .catch(err => {
-                dispatch(loader('stop'))
-                console.log(err)
-            })
+
+        // dispatch(loader('start'))
+        // ProductService.getProductByCategory({ category: tabValue }).then((res) => {
+        //     console.log(res.data)
+        //     dispatch(loader('stop'))
+        //     setTabData(res.data)
+        // })
+        //     .catch(err => {
+        //         dispatch(loader('stop'))
+        //         console.log(err)
+        //     })
     }
     useEffect(() => {
         getProductByCategory()

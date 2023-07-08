@@ -14,5 +14,9 @@
     {
         "title": "Product",
         "path": "/products"
+    },
+    {
+        "title": "Category",
+        "path": "/category"
     }
 ]

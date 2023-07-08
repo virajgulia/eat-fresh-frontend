@@ -7,18 +7,31 @@ import { APIS } from "../../auth/Apis"
 import { useDispatch, useSelector } from "react-redux"
 import { productCrud } from "../../Store/Slices/ProductSlice"
 import { fileUpload } from "../../auth/Firebase/ImageUpload"
+import { toast } from "react-toastify"
 
 export const Product = () => {
     const [dialog, setDialog] = useState(false)
-
+    const [productData, setProductData] = useState({})
     function closeDialog() {
         setDialog(false)
     }
     let sel = useSelector(e => e.product)
     let dispatch = useDispatch()
+
     async function addProduct(e) {
 
         e.preventDefault()
+        console.log(productData)
+        if (productData.image.name !== undefined) {
+            let image = await fileUpload(productData.image)
+            dispatch(productCrud({ method: 'post', data: { ...productData, image } }))
+
+        }
+        else {
+            toast.error('Please add Image ')
+        }
+
+        return
         let file = $('#form input')[2].files[0]
         let image = await fileUpload(file)
         let rr = $('#form').serializeArray()
@@ -52,7 +65,7 @@ export const Product = () => {
             >
                 <div className="p-3">
                     <form onSubmit={addProduct} id="form">
-                        <AddEditProduct closeDialog={closeDialog} />
+                        <AddEditProduct setProductData={setProductData} closeDialog={closeDialog} />
                     </form>
                 </div>
             </Dialog>

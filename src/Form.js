@@ -2,6 +2,7 @@
 export const Form = ({ data }) => {
 
     function renderSwitch(res) {
+        console.log(res)
         switch (res.type) {
             case 'text':
             case 'number':
@@ -14,7 +15,7 @@ export const Form = ({ data }) => {
                 return (
                     <div>
                         <label><b>{res.label}</b></label>
-                        <select className="form-control" defaultValue='' name={res.name}>
+                        <select onChange={res.onChange} className="form-control" defaultValue={res.value} name={res.name}>
                             <option value='' disabled>-Select-</option>
                             {res.options?.map((res2, key) => <option key={key} value={res2}>{res2}</option>)}
                         </select>

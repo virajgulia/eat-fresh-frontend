@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { Dashboardkeeper } from './auth/Dashboardkeeper';
 import { Login } from './auth/Login';
@@ -7,6 +7,7 @@ import { AllRoutes } from './Allroutes';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Loader } from './Loader';
 import { WebKeeper } from './auth/WebKeeper';
+import { Signup } from './auth/Signup';
 function App() {
 
 
@@ -18,6 +19,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
         </Routes>
         <Routes>
           <Route path='/' element={<Dashboardkeeper />}>

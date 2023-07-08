@@ -6,10 +6,13 @@
     color: #ffffff;
 }
 
+
 li {
     cursor: pointer;
 }
 
-.main_con {
+.navbar_main_con {
     height: fit-content;
+    background-color: black !important;
+
 }

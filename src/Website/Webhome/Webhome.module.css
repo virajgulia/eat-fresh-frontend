@@ -1,0 +1,120 @@
+/* .home_page_main_con {
+    background-color: whitesmoke;
+}
+
+.home_main {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(32, 32, 32, 0.7), rgba(26, 25, 25, 0.801)), url('/public/homeBg.jpg')
+}
+
+.home_para_con {
+    height: 75vh;
+}
+
+.round_con {
+    height: 90vh;
+}
+
+.dd {
+    background-image: url('/public/rotatingImg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: rotation 100s linear infinite;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.left_con_text {
+    color: #ffffff;
+}
+
+.left_con_text h1 {
+    font-size: 63px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900
+}
+
+
+.left_con_text p {
+    font-family: "Nunito", sans-serif;
+
+} */
+
+.home_page_main_con {
+    background-color: whitesmoke;
+
+    .first_main_con {
+        display: flex;
+        min-height: 90vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: linear-gradient(rgba(32, 32, 32, 0.7), rgba(26, 25, 25, 0.801)), url('/public/homeBg.jpg')
+    }
+
+    .left_con {
+        width: 50%;
+
+        .head {
+            color: orange;
+            font-family: "Nunito", sans-serif;
+            font-size: 63px;
+            font-weight: 900
+        }
+
+        .para {
+            color: white !important;
+            font-family: "Nunito", sans-serif;
+        }
+
+
+    }
+
+    .right_con {
+
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden !important;
+    }
+
+    .img_con {
+        width: 500px;
+        overflow: hidden !important;
+        height: 500px;
+        border-radius: 50%;
+        animation: rotation 90s linear infinite;
+        background-image: url('/public/rotatingImg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}

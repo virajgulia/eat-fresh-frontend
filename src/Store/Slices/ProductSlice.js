@@ -6,7 +6,17 @@ import { loader } from "./LoaderSlice";
 
 export const productCrud = createAsyncThunk('fetchProducts', async (data, thunk_api) => {
     thunk_api.dispatch(loader('start'))
-    const res = await axios[data.method](APIS.PRODUCT.common, data.data && data.data)
+    let userData = JSON.parse(localStorage.getItem('eatFreshUserData'))
+
+    let token = { headers: { "Authorization": userData.token } }
+    let res
+    if (data.method == 'get') {
+        res = await axios[data.method](APIS.PRODUCT.common, token, data.data && data.data)
+    }
+    else {
+        res = await axios[data.method](APIS.PRODUCT.common, data.data && data.data)
+    }
+
     thunk_api.dispatch(loader('stop'))
     return { type: data.method, data: res.data }
 })

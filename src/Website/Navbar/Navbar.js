@@ -4,7 +4,7 @@ import './Navbar.css'
 export const Navbar = () => {
     return (
         <>
-            <div className="main_con">
+            <div className="navbar_main_con">
                 <div className="header_con container py-3">
 
                     <ul className="flex around align my-auto">
