@@ -1,12 +1,84 @@
 .login_main_con {
 
+    min-height: 100vh;
+    background-image: url('/public/loginimage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .bb {
-        border: 2px solid blue;
+    .login_p {
+        margin-top: 13px;
+        text-align: center;
+    }
+
+    .login_u {
+        color: white;
+    }
+
+    .login_span {
+        float: right;
+        font-size: 15px;
     }
 
 
+    .inp {
 
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ffffff;
+        background-color: transparent;
+    }
+
+    .inp:focus {
+        outline: none;
+    }
+
+    .inp_con {
+        position: relative;
+    }
+
+    .icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .login_buttons {
+        margin-top: 10%;
+    }
+
+    .login_btn {
+        border-radius: 20px;
+        width: 25%;
+        margin-left: 22%;
+        background-color: blue;
+        color: white;
+        padding: 1%;
+        border: none;
+    }
+
+    .login_btn1 {
+        border-radius: 20px;
+        margin-left: 12%;
+        width: 25%;
+        border: none;
+        padding: 1%;
+    }
+
+    .login_text1 {
+        /* width: 50%; */
+    }
+
+    .login_con {
+        width: 50%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.395);
+        padding: 2% 4%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
 
 
