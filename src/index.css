@@ -58,12 +58,16 @@ code {
   border: none;
   border-radius: 4px;
   padding: 6px 10px;
+  border: 2px solid transparent;
+  transition: all 0.2s linear;
 }
 
-.btn_primary_web :hover {
-  color: red !important;
+.btn_primary_web:hover {
+  background-color: #ffffff !important;
+  color: #f28123 !important;
+  border: 2px solid #f28123;
+  box-sizing: initial;
 }
-
 
 .close_btn {
   border: none;

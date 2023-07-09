@@ -1,7 +1,22 @@
 
-import React from "react"
+import React, { useState } from "react"
 import './Navbar.css'
+import { useDispatch, useSelector } from "react-redux"
+import { cartCrud } from "../../Store/Slices/CartSlice"
 export const Navbar = () => {
+
+    let dispatch = useDispatch()
+    let cartLength = useSelector(s => s.cart)
+
+    function getCart() {
+        if (cartLength.length == 0) {
+            dispatch(cartCrud({ method: 'getcart' }))
+        }
+    }
+
+    useState(() => {
+        getCart()
+    }, [])
     return (
         <>
             <div className="navbar_main_con">
@@ -15,6 +30,7 @@ export const Navbar = () => {
                         <li>Reservation</li>
                         <li>About Us</li>
                         <li>Contact</li>
+                        <li>{cartLength.length}</li>
                     </ul>
                 </div>
             </div>

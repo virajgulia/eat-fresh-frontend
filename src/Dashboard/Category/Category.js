@@ -28,7 +28,7 @@ export const Category = () => {
             // dispatch(loader('start'))
             let image = await fileUpload(file)
             console.log(image)
-            return
+
             console.log({ ...categoryData, image })
             dispatch(categorycrud({ method: 'post', data: { ...categoryData, image } }))
             setFile({})

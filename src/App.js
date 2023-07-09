@@ -6,20 +6,19 @@ import { AllRoutes } from './Allroutes';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Loader } from './Loader';
 import { WebKeeper } from './auth/WebKeeper';
-import { Signup } from './auth/Signup';
 import { Login } from './auth/Login/Login';
+import { SignUp } from './auth/SignUp/SignUp';
 function App() {
 
 
   return (
     <>
 
-
       <Loader />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Routes>
           <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
+          <Route path='/signup' element={<SignUp />} />
         </Routes>
         <Routes>
           <Route path='/' element={<Dashboardkeeper />}>

@@ -1,5 +1,5 @@
-const base_url = 'https://eat-fresh.onrender.com/'
-// const base_url = 'http://localhost:8000/'
+// const base_url = 'https://eat-fresh.onrender.com/'
+const base_url = 'http://localhost:8000/'
 
 export const APIS = {
     SIGNUP: `${base_url}signup`,
@@ -21,9 +21,16 @@ export const APIS = {
     CATEGORY: {
         add: `${base_url}category`
     },
+
     menuCategory: {
         getAll: `${base_url}allMenuCategory`,
         add: `${base_url}menuCategory`
     },
+
+
+    CART: {
+        add: `${base_url}additemtocart`,
+        getCartLength: `${base_url}getcartlength`
+    }
 
 }

@@ -15,11 +15,19 @@ export const Login = () => {
 
     async function login(e) {
         e.preventDefault()
-        let res = await LoginSignupService.login(userData)
-        console.log(res.data)
-        localStorage.setItem("eatFreshUserData", JSON.stringify(res.data))
-        localStorage.setItem("isLoggedIn", true)
-        navigate('/table')
+        try {
+            let res = await LoginSignupService.login(userData)
+            console.log(res.data)
+            if (res.data.token !== undefined) {
+                localStorage.setItem("eatFreshUserData", JSON.stringify(res.data))
+                localStorage.setItem("isLoggedIn", true)
+                navigate('/webhome')
+            }
+        }
+        catch (err) {
+            console.log(err)
+        }
+
     }
     return (
         <>
